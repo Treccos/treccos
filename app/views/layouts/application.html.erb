@@ -7,7 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!-- o render renderiza um partial que são arquivos com underscore. Ex da linha de baixo: _header.html.erb-->
+<%= render "layouts/header" %>
 <div class="container">
 <%= yield %>
 </div>
