@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
   resources :tasks
+
   devise_for :users
+  
   root 'pages#home'
 
   # about -> é o paramentro, pages -> é o controller e #about -> é o metodo 
