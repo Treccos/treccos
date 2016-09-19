@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   # about -> é o paramentro, pages -> é o controller e #about -> é o metodo 
   get 'about' => "pages#about"
+  get 'test'  => "pages#test"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
