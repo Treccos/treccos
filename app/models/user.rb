@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # has_many que quiser user tem varios tasks e dependent: :destroy indica que ele somente existe com usuario,
-  # se o usuario for destruido as suas taks tambem é.
+  # se o usuario for destruido as suas tasks tambem é.
   has_many :tasks, dependent: :destroy
 end
