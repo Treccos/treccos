@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project.status %>
+</p>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Content</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th>User_id</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.id %></td>
+        <td><%= task.content %></td>
+        <td><%= task.created_at %></td>
+        <td><%= task.updated_at %></td>
+        <td><%= task.user_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+
+<%#= link_to 'Edit', edit_project_path(@project) %>
+<%= link_to 'Back', projects_path %>
