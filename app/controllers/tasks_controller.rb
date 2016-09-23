@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_task, only: [:show, :edit, :update, :destroy, :change]
+  #before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
   # GET /tasks.json
@@ -29,6 +30,15 @@ class TasksController < ApplicationController
   def create
     #@task = Task.new(task_params)
     @task = current_user.tasks.new(task_params)
+
+    #@task = @project.tasks.new(task_params)
+    #@task.user_id = current_user.id
+    #@task.save
+
+    # Examples of posts and comments
+    #@comment = @post.comments.create(params[:comment].permit(:comment))
+    #@comment.user_id = current_user.id
+    #@comment.save
 
     respond_to do |format|
       if @task.save

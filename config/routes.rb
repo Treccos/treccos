@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
 
+  #resources :projects do
+    #resources :tasks do
+      #member do
+        #put :change
+      #end
+    #end
+  #end
+  
   resources :projects
+  
   resources :tasks do
     member do
       put :change
